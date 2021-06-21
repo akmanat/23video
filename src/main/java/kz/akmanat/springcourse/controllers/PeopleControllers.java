@@ -55,8 +55,8 @@ public class PeopleControllers {
     }
 
     @DeleteMapping("/{id}")
-    public String delate(@PathVariable("id") int id){
-        personDAO.delate(id);
+    public String delete(@PathVariable("id") int id){
+        personDAO.delete(id);
         return "redirect:/people";
     }
 }

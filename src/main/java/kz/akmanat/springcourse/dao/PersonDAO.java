@@ -1,11 +1,11 @@
 package kz.akmanat.springcourse.dao;
 
 import kz.akmanat.springcourse.models.Person;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Component
 public class PersonDAO {
     private static int PEOPLE_COUNT;
@@ -34,7 +34,7 @@ public class PersonDAO {
         Person personToBeUpdated = show(id);
         personToBeUpdated.setName(updatedPerson.getName());
     }
-    public void delate(int id) {
+    public void delete(int id) {
         people.removeIf(p -> p.getId()==id);
     }
 }
